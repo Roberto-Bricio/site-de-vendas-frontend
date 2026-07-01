@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg,
+      #0b1120 0%,
+      #172554 35%,
+      #312e81 70%,
+      #1e1b4b 100%);
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+}
+
+/* Conteúdo */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1f2937;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+.card h2 {
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.card p {
+  line-height: 1.6;
+}
+
+/* Botão */
+button {
+  display: block;
+  margin: 40px auto;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #cbd5e1;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+
+  .card {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+}
