@@ -1,48 +1,224 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Primeiro Commit GitHub</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteDeVendas | Tecnologia & Performance</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header>
-    <h1>🚀 Primeira Versão do Projeto</h1>
-    <p>Salvando a primeira versão de um projeto no GitHub através do Git na máquina.</p>
-  </header>
+    <!-- CABEÇALHO / NAVEGAÇÃO -->
+    <header id="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-bolt icon-gradient"></i> SiteDe<span>Vendas</span>
+            </a>
 
-  <main>
+            <!-- Campo de Pesquisa -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar produtos...">
+                <button aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
 
-    <section class="card">
-      <h2>1. Inicializando o Git</h2>
-      <p>O projeto foi inicializado com <strong>git init</strong>, permitindo o controle de versões localmente.</p>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Início</a></li>
+                    <li><a href="#beneficios" class="nav-link">Vantagens</a></li>
+                    <li><a href="#produtos" class="nav-link">Produtos</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Avaliações</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Ações do Header (Carrinho e Menu Mobile) -->
+            <div class="header-actions">
+                <button class="cart-btn" id="cart-btn" aria-label="Carrinho de Compras">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="container hero-content reveal">
+            <span class="badge">Novos Lançamentos 2026</span>
+            <h1>Tecnologia de Alta Performance para seu <span>Setup</span></h1>
+            <p>Descubra os melhores notebooks, smartphones e periféricos com garantia de qualidade e entrega expressa para todo o Brasil.</p>
+            <div class="hero-buttons">
+                <a href="#produtos" class="btn btn-primary">Comprar Agora <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#beneficios" class="btn btn-secondary">Saiba Mais</a>
+            </div>
+        </div>
     </section>
 
-    <section class="card">
-      <h2>2. Primeiro Commit</h2>
-      <p>Os arquivos foram adicionados com <strong>git add .</strong> e salvos com o primeiro <strong>git
-          commit</strong>.</p>
+    <!-- BENEFÍCIOS -->
+    <section id="beneficios" class="beneficios section">
+        <div class="container">
+            <h2 class="section-title reveal">Por que comprar conosco?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card reveal">
+                    <div class="icon-box"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>Frete Grátis</h3>
+                    <p>Em compras acima de R$ 299,00 para todo o país.</p>
+                </div>
+                <div class="benefit-card reveal">
+                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Compra Segura</h3>
+                    <p>Criptografia de ponta a ponta em todas as transações.</p>
+                </div>
+                <div class="benefit-card reveal">
+                    <div class="icon-box"><i class="fa-solid fa-credit-card"></i></div>
+                    <h3>Parcelamento</h3>
+                    <p>Em até 12x sem juros nos principais cartões de crédito.</p>
+                </div>
+                <div class="benefit-card reveal">
+                    <div class="icon-box"><i class="fa-solid fa-bolt-lightning"></i></div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Parcerias logísticas para entregas em até 48 horas.</p>
+                </div>
+                <div class="benefit-card reveal">
+                    <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
+                    <h3>Suporte 24h</h3>
+                    <p>Equipe especializada pronta para te atender a qualquer momento.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="card">
-      <h2>3. Enviando para o GitHub</h2>
-      <p>Após conectar o repositório remoto, a primeira versão foi enviada para o GitHub utilizando <strong>git
-          push</strong>.</p>
+    <!-- SEÇÃO DE PRODUTOS E CATEGORIAS -->
+    <section id="produtos" class="produtos section">
+        <div class="container">
+            <h2 class="section-title reveal">Nossos Produtos</h2>
+            
+            <!-- Filtros de Categorias -->
+            <div class="categories-filter reveal">
+                <button class="filter-btn active" data-category="todos">Todos</button>
+                <button class="filter-btn" data-category="Smartphones">Smartphones</button>
+                <button class="filter-btn" data-category="Notebooks">Notebooks</button>
+                <button class="filter-btn" data-category="Games">Games</button>
+                <button class="filter-btn" data-category="Periféricos">Periféricos</button>
+                <button class="filter-btn" data-category="Acessórios">Acessórios</button>
+            </div>
+
+            <!-- Grid de Produtos (Gerado dinamicamente via JS) -->
+            <div class="products-grid" id="products-grid">
+                <!-- Os cards dos produtos serão inseridos aqui pelo script.js -->
+            </div>
+        </div>
     </section>
 
-    <button>Primeira Versão Publicada 🚀</button>
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="depoimentos section">
+        <div class="container">
+            <h2 class="section-title reveal">O que dizem nossos clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Comprei um notebook para trabalho e chegou no dia seguinte! Atendimento excelente e o produto veio perfeitamente embalado."</p>
+                    <div class="client-info">
+                        <strong>Fabrício Rodrigues</strong>
+                        <span>Empresário</span>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Os preços são imbatíveis. Montei todo o meu setup gamer com os periféricos da loja. Recomendo de olhos fechados!"</p>
+                    <div class="client-info">
+                        <strong>Fernando Caetano</strong>
+                        <span>Desenvolvedor de Software</span>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"O suporte me ajudou a escolher exatamente o smartphone que eu precisava. Experiência de compra simples, rápida e transparente."</p>
+                    <div class="client-info">
+                        <strong>Nathany Almeida</strong>
+                        <span>Designer Gráfico</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </main>
+    <!-- RODAPÉ -->
+    <footer id="contato" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="#" class="logo"><i class="fa-solid fa-bolt icon-gradient"></i> SiteDe<span>Vendas</span></a>
+                <p>O seu e-commerce de confiança para tecnologia de ponta, setups profissionais e equipamentos de alto rendimento.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/b.robertocm/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#beneficios">Vantagens</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#depoimentos">Avaliações</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Av. da Tecnologia, 1000 - Centro, Brasília - DF</p>
+                <p><i class="fa-solid fa-envelope"></i> contato@sitedevendas.com.br</p>
+                <p><i class="fa-solid fa-phone"></i> (61) 98575-0449</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SiteDeVendas. Todos os direitos reservados. Desenvolvido por <strong> <a href="https://www.instagram.com/b.robertocm/" target="_blank"> Roberto Brício</a></strong>.</p>
+        </div>
+    </footer>
 
-  <footer>
-    <p>Projeto desenvolvido por <a href="https://www.instagram.com/b.robertocm/" target="_blank">@Roberto Caetano</a> •
-      Backend Java</p>
-  </footer>
+    <!-- MODAL DO CARRINHO -->
+    <div class="cart-modal-overlay" id="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h3>Seu Carrinho</h3>
+                <button class="close-cart" id="close-cart">&times;</button>
+            </div>
+            <div class="cart-body" id="cart-items">
+                <!-- Itens do carrinho aparecem aqui -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <strong id="cart-total-value">R$ 0,00</strong>
+                </div>
+                <button class="btn btn-primary btn-block">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
 
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Voltar ao Topo">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Principal -->
+    <script src="script.js"></script>
 </body>
-
 </html>
